@@ -12,7 +12,7 @@ public final class Schlag implements Operation {
 	}
 	
 	public String fuehreAus(Scorecard scorecard) {
-//		scorecard.erhoeheAnzahlSchlaege(); xxx
+		scorecard.erhoeheAnzahlSchlaege();
 		return folgeoperation.fuehreAus(scorecard);
 	}
 
