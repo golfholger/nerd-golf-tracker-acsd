@@ -66,7 +66,7 @@ task cucumber() {
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
               '--plugin', 'pretty',
-              '--plugin', 'html:target/cucumber-report.html', 
+              '--plugin', 'html:build/reports/tests/cucumber-report.html', 
               '--glue', 'de.itagile.golf',
               '--tags', 'not @in_arbeit', 
               'src/cucumber/resources'
