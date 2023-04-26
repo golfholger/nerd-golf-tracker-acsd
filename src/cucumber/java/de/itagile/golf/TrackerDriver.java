@@ -38,6 +38,7 @@ public class TrackerDriver {
 		return new BufferedReader(new InputStreamReader(process.getInputStream()));
 	}
 
+	@SuppressWarnings("deprecation")
 	private Process starteProzess() {
 		try {
 			String command = String.format(
