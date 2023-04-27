@@ -15,9 +15,11 @@ public class Main {
 		Tracker tracker = new Tracker(new EinfacherInterpreter(), startoperation);
 
 		konsole.println(tracker.starte()).beendeAusgabe();
-		
-		while (true) {
+		boolean isBeendet = false;
+		while (!isBeendet) {
 			String befehl = konsole.liesZeileEin();
+			if("Beenden".equals(befehl))
+				isBeendet = true;
 			konsole.println(tracker.reagiereAuf(befehl)).beendeAusgabe();
 		}
 	}
