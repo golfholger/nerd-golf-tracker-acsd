@@ -3,6 +3,8 @@ package de.itagile.golf;
 import java.util.HashMap;
 import java.util.Map;
 
+import de.itagile.golf.operation.Hilfe;
+
 
 public class EinfacherInterpreter implements Interpreter {
 
@@ -14,6 +16,7 @@ public class EinfacherInterpreter implements Interpreter {
 
 	@Override
 	public Operation interpretiere(String string) {
-		return operationen.get(string);
+		
+		return operationen.getOrDefault(string, new Hilfe(new BefehleSammler()));
 	}
 }
