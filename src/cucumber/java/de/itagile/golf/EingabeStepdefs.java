@@ -15,13 +15,11 @@ public class EingabeStepdefs {
 
 	@When("ich eine unbekannte Eingabe mache")
 	public void ich_eine_unbekannte_eingabe_mache() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		tracker.gibEin("Beispiel für irgendwas unbekanntes");
 	}
 
 	@Then("bekomme ich einen Hinweis auf die Hilfe")
 	public void bekomme_ich_einen_hinweis_auf_die_hilfe() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		tracker.assertThatAntwort(containsString("Ich reagiere auf:"));
 	}
 }
