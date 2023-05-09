@@ -1,5 +1,8 @@
 package de.itagile.golf;
 
+import javax.naming.OperationNotSupportedException;
+import java.util.Map;
+
 public class EinfacheScorecard implements Scorecard {
 
 	private int aktuellesLoch = 1;
@@ -20,5 +23,9 @@ public class EinfacheScorecard implements Scorecard {
 
 	public int aktuellesLoch() {
 		return aktuellesLoch;
+	}
+
+	public Map<Integer, Integer> lochPunkte() {
+		throw new RuntimeException("Nich da!");
 	}
 }

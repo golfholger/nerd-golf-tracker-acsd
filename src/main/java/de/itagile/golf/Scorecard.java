@@ -1,5 +1,7 @@
 package de.itagile.golf;
 
+import java.util.Map;
+
 public interface Scorecard {
 
 	void erhoeheAnzahlSchlaege();
@@ -9,5 +11,7 @@ public interface Scorecard {
 	void schliesseLochAb();
 
 	int aktuellesLoch();
+
+	Map<Integer, Integer> lochPunkte();
 
 }
