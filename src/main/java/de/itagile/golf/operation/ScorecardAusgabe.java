@@ -1,7 +1,5 @@
 package de.itagile.golf.operation;
 
-import java.util.Iterator;
-
 import de.itagile.golf.Operation;
 import de.itagile.golf.Scorecard;
 import de.itagile.golf.util.SystemProperties;

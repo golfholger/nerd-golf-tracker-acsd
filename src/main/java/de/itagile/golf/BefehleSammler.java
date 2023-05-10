@@ -7,6 +7,7 @@ import de.itagile.golf.befehl.BeendenBefehl;
 import de.itagile.golf.befehl.HilfeBefehl;
 import de.itagile.golf.befehl.LochwechselBefehl;
 import de.itagile.golf.befehl.SchlagBefehl;
+import de.itagile.golf.befehl.ScorecardBefehl;
 
 public class BefehleSammler {
 
@@ -15,6 +16,7 @@ public class BefehleSammler {
 		ernte.add(new SchlagBefehl());
 		ernte.add(new LochwechselBefehl());
 		ernte.add(new HilfeBefehl());
+		ernte.add(new ScorecardBefehl());
 		ernte.add(new BeendenBefehl());
 		return ernte;
 	}

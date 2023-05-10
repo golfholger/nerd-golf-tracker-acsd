@@ -2,13 +2,12 @@ package de.itagile.golf.operation;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import java.util.Collections;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
@@ -26,7 +25,7 @@ class ScorecardTest {
 
 	@Test
 	void gibtScorecardAus() {
-		Map map = new HashMap<Integer, Integer>();
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 		map.put(1, 1);
 		Scorecard scorecard = mock(Scorecard.class);
 		when(scorecard.lochPunkte()).thenReturn(map);
@@ -35,7 +34,7 @@ class ScorecardTest {
 	
 	@Test
 	void gibtScorecardAusMehrereZeilen() {
-		Map map = new HashMap<Integer, Integer>();
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 		map.put(1, 1);
 		map.put(2, 1);
 		Scorecard scorecard = mock(Scorecard.class);

@@ -1,9 +1,9 @@
 package de.itagile.golf;
 
+import static org.hamcrest.Matchers.containsString;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-import static org.hamcrest.Matchers.containsString;
 
 public class EingabeStepdefs {
 

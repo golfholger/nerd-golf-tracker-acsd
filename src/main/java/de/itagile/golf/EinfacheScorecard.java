@@ -1,8 +1,7 @@
 package de.itagile.golf;
 
-import javax.naming.OperationNotSupportedException;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 
 public class EinfacheScorecard implements Scorecard {
 

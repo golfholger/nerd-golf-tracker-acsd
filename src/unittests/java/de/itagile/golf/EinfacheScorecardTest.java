@@ -2,6 +2,7 @@ package de.itagile.golf;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+
 import java.util.HashMap;
 import java.util.Map;
 

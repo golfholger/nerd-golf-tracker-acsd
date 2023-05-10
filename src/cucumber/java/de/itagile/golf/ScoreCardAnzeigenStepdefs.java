@@ -1,14 +1,14 @@
 package de.itagile.golf;
 
-import io.cucumber.java.de.Dann;
-import io.cucumber.java.de.Gegebensei;
-import io.cucumber.java.de.Wenn;
+import static org.hamcrest.Matchers.containsString;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.StringJoiner;
 
-import static org.hamcrest.Matchers.containsString;
+import de.itagile.golf.util.SystemProperties;
+import io.cucumber.java.de.Dann;
+import io.cucumber.java.de.Gegebensei;
+import io.cucumber.java.de.Wenn;
 
 public class ScoreCardAnzeigenStepdefs {
 
@@ -33,7 +33,7 @@ public class ScoreCardAnzeigenStepdefs {
 
     @Dann("möchte ich folgende Tabelle sehen:")
     public void möchte_ich_folgende_tabelle_sehen(io.cucumber.datatable.DataTable dataTable) {
-        StringJoiner result = new StringJoiner("\n");
+        StringJoiner result = new StringJoiner(SystemProperties.LINE_SEPARATOR);
         final Map<String, String> map = dataTable.subTable(1,0).asMap();
         map.forEach((key, value) -> result.add(key + ". Loch: " + value));
         this.driver.assertThatAntwort(containsString(result.toString()));
