@@ -17,7 +17,7 @@ public class BeendenStepdefs {
 
 	@Then("bekomme ich vor dem Beenden die Nachricht {string}")
 	public void bekomme_ich_vor_dem_beenden_die_nachricht(String string) {
-	    this.tracker.assertThatAntwort(Matchers.is(string));
+	    this.tracker.assertThatAntwort(Matchers.containsString(string));
 	}
 
 }	

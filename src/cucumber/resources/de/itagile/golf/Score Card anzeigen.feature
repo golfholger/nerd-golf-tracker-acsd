@@ -1,7 +1,6 @@
 # language: de
 Funktionalität: Zeige Score Card an
 
-	@in_arbeit
   Szenario:
     Gegeben sei ich habe auf einem Loch 1 Schlag gemacht
     Und ich habe auf einem Loch 3 Schlag gemacht
