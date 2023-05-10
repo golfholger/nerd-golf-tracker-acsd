@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.itagile.golf.Befehl;
-import de.itagile.golf.BefehleSammler;
 import de.itagile.golf.Operation;
 import de.itagile.golf.Scorecard;
 import de.itagile.golf.util.CollectionUtils;
@@ -12,9 +11,9 @@ import de.itagile.golf.util.SystemProperties;
 
 public class Hilfe implements Operation {
 
-	private final BefehleSammler sammler;
+	private final BefehleRepo sammler;
 
-	public Hilfe(BefehleSammler sammler) {
+	public Hilfe(BefehleRepo sammler) {
 		this.sammler = sammler;
 	}
 

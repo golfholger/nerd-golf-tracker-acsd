@@ -38,7 +38,7 @@ public class HilfeTest {
 	}
 
 	private String hilfetext(Befehl... befehle) {
-		BefehleSammler sammler = mock(BefehleSammler.class);
+		BefehleRepo sammler = mock(BefehleSammler.class);
 		
 		Hilfe hilfe = new Hilfe(sammler);
 		when(sammler.sammle()).thenReturn(asList(befehle));
