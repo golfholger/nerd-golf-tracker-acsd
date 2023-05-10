@@ -34,8 +34,7 @@ public class ScoreCardAnzeigenStepdefs {
     @Dann("möchte ich folgende Tabelle sehen:")
     public void möchte_ich_folgende_tabelle_sehen(io.cucumber.datatable.DataTable dataTable) {
         StringJoiner result = new StringJoiner("\n");
-        final Map<String, String> map = new HashMap<>(dataTable.asMap());
-        map.remove("Loch");
+        final Map<String, String> map = dataTable.subTable(1,0).asMap();
         map.forEach((key, value) -> result.add(key + ". Loch: " + value));
         this.driver.assertThatAntwort(containsString(result.toString()));
     }
