@@ -4,6 +4,7 @@ import io.cucumber.java.de.Dann;
 import io.cucumber.java.de.Gegebensei;
 import io.cucumber.java.de.Wenn;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.StringJoiner;
 
@@ -32,16 +33,9 @@ public class ScoreCardAnzeigenStepdefs {
 
     @Dann("möchte ich folgende Tabelle sehen:")
     public void möchte_ich_folgende_tabelle_sehen(io.cucumber.datatable.DataTable dataTable) {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-        // Double, Byte, Short, Long, BigInteger or BigDecimal.
-        //
-        // For other transformations you can register a DataTableType.
-        //this.driver.assertThatAntwort(conta);
         StringJoiner result = new StringJoiner("\n");
-        final Map<String, String> map = dataTable.asMap();
+        final Map<String, String> map = new HashMap<>(dataTable.asMap());
+        map.remove("Loch");
         map.forEach((key, value) -> result.add(key + ". Loch: " + value));
         this.driver.assertThatAntwort(containsString(result.toString()));
     }
