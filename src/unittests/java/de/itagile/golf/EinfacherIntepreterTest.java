@@ -20,7 +20,7 @@ public class EinfacherIntepreterTest {
 	
 	private static Stream<Arguments> schlagParameter() {
 	    return Stream.of(
-	      Arguments.of("Schlage Ball", Schlag.class),
+	      Arguments.of("Schlage Ball", Operation.class),
 	      Arguments.of("Nächstes Loch", Operation.class),
 	      Arguments.of("Hilfe", Hilfe.class)
 	    );
