@@ -13,8 +13,7 @@ import de.itagile.golf.Scorecard;
 public class SchlagzahlausgabeTest {
 
 	private Scorecard scorecard = mock(Scorecard.class);
-	private Operation folgeoperation = mock(Operation.class);
-	private Operation schlagzahlausgabe = new Schlagzahlausgabe(folgeoperation);
+	private Operation schlagzahlausgabe = new Schlagzahlausgabe();
 	
 	@Test
 	public void meldetEinenSchlag() throws Exception {
@@ -28,10 +27,4 @@ public class SchlagzahlausgabeTest {
 		assertThat(schlagzahlausgabe.fuehreAus(scorecard), containsString("2 Schläge"));
 	}
 	
-	@Test
-	public void integriertAusgabeDerFolgeoperation() throws Exception {
-		when(folgeoperation.fuehreAus(scorecard)).thenReturn("folgeausgabe");
-		assertThat(schlagzahlausgabe.fuehreAus(scorecard), containsString("folgeausgabe"));
-	}
-
 }

@@ -1,14 +1,17 @@
 package de.itagile.golf.befehl;
 
 import de.itagile.golf.Befehl;
+import de.itagile.golf.Operation;
+import de.itagile.golf.operation.KombiOperation;
 import de.itagile.golf.operation.Lochausgabe;
 import de.itagile.golf.operation.Lochwechsel;
 import de.itagile.golf.operation.Lochwechselausgabe;
 
 public class LochwechselBefehl implements Befehl {
 
-	public Lochwechsel operation() {
-		return new Lochwechsel(new Lochwechselausgabe(new Lochausgabe()));
+	public Operation operation() {
+		KombiOperation kombiOperation = new KombiOperation(new Lochwechsel(), new Lochwechselausgabe(), new Lochausgabe());
+		return kombiOperation;
 	}
 
 	public String kommando() {
